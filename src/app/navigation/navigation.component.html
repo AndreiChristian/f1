@@ -19,27 +19,25 @@
           <img src="assets/images/logo.png" alt="four leaf clover">
         </span>
         <ul>
-          <li><a routerLink="/">HOME</a></li>
-          <li><a routerLink="/seasons">DRIVERS</a></li>
-          <li><a routerLink="/seasons">SEASONS</a></li>
-          <li><a routerLink="/races">RACES</a></li>
-          <li><a routerLink="/circuits">CIRCUITS</a></li>
-          <li>
-            <button
+          <li><a mat-tab-link routerLink="/"> HOME</a></li>
+          <li><a mat-tab-link routerLink="/">HOME</a></li>
+          <li><a mat-tab-link routerLink="/seasons">DRIVERS</a></li>
+          <li><a mat-tab-link routerLink="/seasons">SEASONS</a></li>
+          <li><a mat-tab-link routerLink="/races">RACES</a></li>
+          <li><a mat-tab-link routerLink="/circuits">CIRCUITS</a></li>
+          <li><button
               type="button"
               aria-label="Toggle sidenav"
               mat-icon-button
               (click)="drawer.toggle()">
               <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-            </button>
-          </li>
+            </button></li>
         </ul>
       </nav>
     </header>
-    <div class="carbon"></div>
-
 
     <router-outlet></router-outlet>
+    <app-footer></app-footer>
 
   </mat-sidenav-content>
 

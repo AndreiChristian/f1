@@ -20,6 +20,7 @@ import { CircuitsComponent } from './circuits/circuits.component';
 import { CircuitsItemComponent } from './circuits/circuits-item/circuits-item.component';
 import { CircuitsListComponent } from './circuits/circuits-list/circuits-list.component';
 import { CircuitsTableComponent } from './circuits/circuits-table/circuits-table.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { CircuitsTableComponent } from './circuits/circuits-table/circuits-table
     CircuitsItemComponent,
     CircuitsListComponent,
     CircuitsTableComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

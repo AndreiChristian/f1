@@ -1,0 +1,11 @@
+@use "../../styles.scss";
+
+p {
+  height: 5vh;
+  @include styles.carbon-fiber;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}

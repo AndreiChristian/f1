@@ -13,7 +13,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatRippleModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
-import {MatSortModule} from '@angular/material/sort';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatTabNavPanel } from '@angular/material/tabs';
 @NgModule({
   imports: [
     LayoutModule,
@@ -30,7 +32,8 @@ import {MatSortModule} from '@angular/material/sort';
     MatProgressSpinnerModule,
     MatRippleModule,
     MatInputModule,
-    MatSortModule
+    MatSortModule,
+    MatTabsModule,
   ],
   exports: [
     LayoutModule,
@@ -47,7 +50,9 @@ import {MatSortModule} from '@angular/material/sort';
     MatProgressSpinnerModule,
     MatRippleModule,
     MatInputModule,
-    MatSortModule
+    MatSortModule,
+    MatTableModule,
+    MatTabNavPanel,
   ],
 })
 export class MaterialModule {}
