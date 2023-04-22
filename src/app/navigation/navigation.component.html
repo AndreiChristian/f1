@@ -19,13 +19,17 @@
           <img src="assets/images/logo.png" alt="four leaf clover">
         </span>
         <ul>
-          <li><a mat-tab-link routerLink="/"> HOME</a></li>
-          <li><a mat-tab-link routerLink="/">HOME</a></li>
-          <li><a mat-tab-link routerLink="/seasons">DRIVERS</a></li>
-          <li><a mat-tab-link routerLink="/seasons">SEASONS</a></li>
-          <li><a mat-tab-link routerLink="/races">RACES</a></li>
-          <li><a mat-tab-link routerLink="/circuits">CIRCUITS</a></li>
+          <li><a *ngIf="!(isHandset$ |async)" mat-tab-link routerLink="/"> HOME</a></li>
+          <li><a *ngIf="!(isHandset$ |async)" mat-tab-link routerLink="/">HOME</a></li>
+          <li><a *ngIf="!(isHandset$ |async)" mat-tab-link
+              routerLink="/seasons">DRIVERS</a></li>
+          <li><a *ngIf="!(isHandset$ |async)" mat-tab-link
+              routerLink="/seasons">SEASONS</a></li>
+          <li><a *ngIf="!(isHandset$ |async)" mat-tab-link routerLink="/races">RACES</a></li>
+          <li><a *ngIf="!(isHandset$ |async)" mat-tab-link
+              routerLink="/circuits">CIRCUITS</a></li>
           <li><button
+
               type="button"
               aria-label="Toggle sidenav"
               mat-icon-button
@@ -37,7 +41,6 @@
     </header>
 
     <router-outlet></router-outlet>
-    <app-footer></app-footer>
 
   </mat-sidenav-content>
 
