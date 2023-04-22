@@ -8,10 +8,11 @@ import { HomeComponent } from './home/home.component';
 import { SeasonsComponent } from './seasons/seasons.component';
 import { ListComponent } from './seasons/list/list.component';
 import { DetailComponent } from './seasons/detail/detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, SeasonsComponent, ListComponent, DetailComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,9 @@
+@use '../../../styles';
+
+h4{
+  color: styles.$primary-color;
+}
+
+h3{
+  @include styles.link;
+}

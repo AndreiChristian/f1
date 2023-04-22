@@ -1,0 +1,15 @@
+@use "../styles.scss";
+
+header{
+  position: sticky;
+  padding: 1vh 3vw;
+}
+
+nav{
+  @include styles.flex-row-between
+}
+
+ul{
+  @include styles.flex-row-center($gap: 2vw);
+  font-family: styles.$hollow-font;
+}
