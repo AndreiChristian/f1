@@ -7,6 +7,7 @@ import { RacesService } from '../races.service';
   styleUrls: ['./races-list.component.scss']
 })
 export class RacesListComponent {
+
   selectedSeason: number = 2023;
 
   years = [
@@ -22,8 +23,10 @@ export class RacesListComponent {
   constructor(private racesService: RacesService) {}
 
   ngOnInit(): void {
+    this.racesService.racesData$.subscribe( data => console.log(data))
     this.racesService.getSeasonData(this.selectedSeason)
   }
+
   onSelectedValueChanged() {
     this.racesService.getSeasonData(this.selectedSeason);
   }

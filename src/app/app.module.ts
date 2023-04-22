@@ -16,6 +16,10 @@ import { RacesComponent } from './races/races.component';
 import { RacesTableComponent } from './races/races-table/races-table.component';
 import { RacesListComponent } from './races/races-list/races-list.component';
 import { RacesItemComponent } from './races/races-item/races-item.component';
+import { CircuitsComponent } from './circuits/circuits.component';
+import { CircuitsItemComponent } from './circuits/circuits-item/circuits-item.component';
+import { CircuitsListComponent } from './circuits/circuits-list/circuits-list.component';
+import { CircuitsTableComponent } from './circuits/circuits-table/circuits-table.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,10 @@ import { RacesItemComponent } from './races/races-item/races-item.component';
     RacesTableComponent,
     RacesListComponent,
     RacesItemComponent,
+    CircuitsComponent,
+    CircuitsItemComponent,
+    CircuitsListComponent,
+    CircuitsTableComponent,
   ],
   imports: [
     BrowserModule,

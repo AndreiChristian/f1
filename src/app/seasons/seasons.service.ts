@@ -12,10 +12,10 @@ export class SeasonsService {
   constructor(private http: HttpClient) {}
 
   getSeasonData(selectedSeason: number) {
-    this.http
-      .get(`https://ergast.com/api/f1/${selectedSeason}/results/1.json`)
-      .pipe(map((data: any) => data.MRData.RaceTable.Races))
-      .subscribe((data: any) => this.seasonsSubject.next(data));
+    // this.http
+    //   .get(`https://ergast.com/api/f1/${selectedSeason}/results/1.json`)
+    //   .pipe(map((data: any) => data.MRData.RaceTable.Races))
+    //   .subscribe((data: any) => this.seasonsSubject.next(data));
     // .subscribe((data: any) => {
     //   this.seasonsData = data.MRData.RaceTable.Races;
     //   console.log(this.seasonsData)
