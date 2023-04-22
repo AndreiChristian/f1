@@ -12,6 +12,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatRippleModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
   imports: [
@@ -28,6 +30,8 @@ import { MatRippleModule } from '@angular/material/core';
     MatProgressBarModule,
     MatProgressSpinnerModule,
     MatRippleModule,
+    MatInputModule,
+    MatSortModule
   ],
   exports: [
     LayoutModule,
@@ -43,6 +47,8 @@ import { MatRippleModule } from '@angular/material/core';
     MatProgressBarModule,
     MatProgressSpinnerModule,
     MatRippleModule,
+    MatInputModule,
+    MatSortModule
   ],
 })
 export class MaterialModule {}
