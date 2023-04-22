@@ -11,6 +11,7 @@ import { DetailComponent } from './seasons/detail/detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MaterialModule } from './material.module';
+import { SeasonsTableComponent } from './seasons/seasons-table/seasons-table.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MaterialModule } from './material.module';
     ListComponent,
     DetailComponent,
     NavigationComponent,
+    SeasonsTableComponent,
   ],
   imports: [
     BrowserModule,
