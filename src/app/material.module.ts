@@ -7,8 +7,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatTableModule} from '@angular/material/table';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatRippleModule } from '@angular/material/core';
 
 @NgModule({
   imports: [
@@ -20,7 +23,11 @@ import {MatTableModule} from '@angular/material/table';
     MatListModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRippleModule,
   ],
   exports: [
     LayoutModule,
@@ -31,7 +38,11 @@ import {MatTableModule} from '@angular/material/table';
     MatListModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRippleModule,
   ],
 })
 export class MaterialModule {}

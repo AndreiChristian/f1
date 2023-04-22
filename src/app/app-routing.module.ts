@@ -7,6 +7,9 @@ import { ListComponent } from './seasons/list/list.component';
 import { RacesComponent } from './races/races.component';
 import { RacesListComponent } from './races/races-list/races-list.component';
 import { RacesItemComponent } from './races/races-item/races-item.component';
+import { CircuitsComponent } from './circuits/circuits.component';
+import { CircuitsListComponent } from './circuits/circuits-list/circuits-list.component';
+import { CircuitsItemComponent } from './circuits/circuits-item/circuits-item.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,10 +24,18 @@ const routes: Routes = [
   {
     path: 'races',
     component: RacesComponent,
-    children:[
-      {path:"",component:RacesListComponent},
-      {path:":id",component:RacesItemComponent}
-    ]
+    children: [
+      { path: '', component: RacesListComponent },
+      { path: ':id', component: RacesItemComponent },
+    ],
+  },
+  {
+    path: 'circuits',
+    component: CircuitsComponent,
+    children: [
+      { path: '', component: CircuitsListComponent },
+      { path: ':id', component: CircuitsItemComponent },
+    ],
   },
 ];
 
