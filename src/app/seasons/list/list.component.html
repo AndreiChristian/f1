@@ -1,0 +1,4 @@
+<div *ngFor="let season of seasons$ |async">
+  <h3><a [routerLink]="['/seasons',season.season]">{{season.season}}</a></h3>
+  <h4>{{season.url}}</h4>
+</div>
