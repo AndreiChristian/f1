@@ -12,6 +12,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MaterialModule } from './material.module';
 import { SeasonsTableComponent } from './seasons/seasons-table/seasons-table.component';
+import { RacesComponent } from './races/races.component';
+import { RacesTableComponent } from './races/races-table/races-table.component';
+import { RacesListComponent } from './races/races-list/races-list.component';
+import { RacesItemComponent } from './races/races-item/races-item.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,10 @@ import { SeasonsTableComponent } from './seasons/seasons-table/seasons-table.com
     DetailComponent,
     NavigationComponent,
     SeasonsTableComponent,
+    RacesComponent,
+    RacesTableComponent,
+    RacesListComponent,
+    RacesItemComponent,
   ],
   imports: [
     BrowserModule,

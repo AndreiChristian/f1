@@ -14,7 +14,11 @@ export class SeasonsTableComponent implements OnInit {
   ngOnInit(): void {
     this.seasonsService.seasonData$.subscribe((data: any) => {
       this.dataSource = data;
-      // console.log(this.dataSource);
+      console.log(this.dataSource);
     });
+  }
+
+  onClickRow(row:any) {
+    console.log(row);
   }
 }
