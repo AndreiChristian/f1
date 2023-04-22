@@ -1,6 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { SeasonsService } from './seasons.service';
 
 @Component({
   selector: 'app-seasons',
@@ -10,17 +9,14 @@ import { Observable, map } from 'rxjs';
 export class SeasonsComponent implements OnInit {
   selectedSeason: number = 2023;
 
-  constructor(private http: HttpClient) {}
-
-  raceTable: any;
+  constructor(
+    private seasonsService: SeasonsService
+  ) {}
 
   ngOnInit(): void {
-    this.http
-      .get(`https://ergast.com/api/f1/${this.selectedSeason}/results/1.json`)
-      .subscribe((data: any) => {
-        this.raceTable = data.MRData.RaceTable.Races;
-        console.log(this.raceTable);
-      });
+    this.seasonsService.getSeasonData(this.selectedSeason);
   }
-  onSelectedValueChanged() {}
+  onSelectedValueChanged() {
+    this.seasonsService.getSeasonData(this.selectedSeason);
+  }
 }

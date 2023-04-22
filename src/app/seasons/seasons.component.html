@@ -1,13 +1,14 @@
 <h1>Seasons</h1>
 <mat-form-field appearance="outline">
   <mat-label>{{selectedSeason}}</mat-label>
-  <mat-select [(value)]="selectedSeason" (valueChange)="onSelectedValueChanged()" >
+  <mat-select [(value)]="selectedSeason"
+    (valueChange)="onSelectedValueChanged()">
     <mat-option value="2023">2023</mat-option>
     <mat-option value="2022">2022</mat-option>
     <mat-option value="2021">2021</mat-option>
   </mat-select>
 </mat-form-field>
 
-<app-seasons-table [seasonsTable]="raceTable" ></app-seasons-table>
+<app-seasons-table></app-seasons-table>
 
 <!-- <router-outlet></router-outlet> -->
