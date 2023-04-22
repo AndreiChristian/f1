@@ -13,7 +13,7 @@ export class CircuitsService {
 
   getCircuits() {
     this.http
-      .get('http://ergast.com/api/f1/circuits.json')
+      .get('http://ergast.com/api/f1/circuits.json?limit=100')
       .pipe(map((data: any) => data.MRData.CircuitTable.Circuits))
       .subscribe((data) => this.CircuitSubject.next(data));
   }

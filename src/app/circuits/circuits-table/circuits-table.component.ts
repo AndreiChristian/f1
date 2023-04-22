@@ -9,26 +9,21 @@ import { MatTableDataSource } from '@angular/material/table';
   templateUrl: './circuits-table.component.html',
   styleUrls: ['./circuits-table.component.scss'],
 })
-export class CircuitsTableComponent implements OnInit, AfterViewInit {
+export class CircuitsTableComponent implements OnInit {
   displayedColumns: string[] = ['name', 'country', 'city', 'lat', 'long'];
   dataSource: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private circuitService: CircuitsService) {
-    this.dataSource = new MatTableDataSource();
-  }
+  constructor(private circuitService: CircuitsService) {}
 
   ngOnInit(): void {
-    this.circuitService.circuits$.subscribe(
-      (data) => ((this.dataSource = data), console.log(this.dataSource))
-    );
-  }
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+    this.circuitService.circuits$.subscribe((data) => {
+      this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    });
   }
 
   applyFilter(event: Event) {
