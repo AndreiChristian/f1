@@ -18,13 +18,21 @@
   z-index: 1;
 }
 
+img{
+  height: 8vh;
+  width: 8vh;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
 header{
   position: sticky;
   top: 0;
   padding: 1vh 3vw;
-  border-bottom: 2px solid red;
-  background-color: inherit;
+  z-index: 5;
+  background-color: styles.$primary-color;
 }
+
 
 nav{
   @include styles.flex-row-between
@@ -34,11 +42,8 @@ ul{
   @include styles.flex-row-center($gap: 2vw);
   font-family: styles.$hollow-font;
   font-size: 1.4rem;
-}
 
-.container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  outline: 1px solid red;
+  li a{
+    color: #fff;
+  }
 }
