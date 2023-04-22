@@ -13,20 +13,30 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
+    <header>
+      <nav>
+        <span>Logo</span>
+        <ul>
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/seasons">Drivers</a></li>
+          <li><a routerLink="/seasons">Seasons</a></li>
+          <li><a routerLink="/seasons">Races</a></li>
+          <li>
+            <button
+              type="button"
+              aria-label="Toggle sidenav"
+              mat-icon-button
+              (click)="drawer.toggle()">
+              <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>f1</span>
-    </mat-toolbar>
-
-    <router-outlet></router-outlet>
-
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 
 </mat-sidenav-container>

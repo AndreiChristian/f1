@@ -8,15 +8,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['./seasons.component.scss'],
 })
 export class SeasonsComponent implements OnInit {
-  seasons: any;
+  selected: number = 2023;
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
-    this.http
-      .get('http://ergast.com/api/f1/seasons.json')
-      .subscribe((data: any) => {
-        this.seasons = data.MRData.SeasonTable.Seasons;
-      });
-  }
+  ngOnInit(): void {}
 }

@@ -1,2 +1,14 @@
 <h1>Seasons</h1>
+<mat-form-field appearance="outline">
+  <mat-label>{{selected}}</mat-label>
+  <mat-select [(value)]="selected">
+    <mat-option value="2023">2023</mat-option>
+    <mat-option value="2022">2022</mat-option>
+    <mat-option value="2021">2021</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<p>You selected: {{selected}}</p>
+
+
 <router-outlet></router-outlet>

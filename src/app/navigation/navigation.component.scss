@@ -1,3 +1,5 @@
+@use "../../styles.scss";
+
 .sidenav-container {
   height: 100%;
 }
@@ -14,4 +16,29 @@
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+header{
+  position: sticky;
+  top: 0;
+  padding: 1vh 3vw;
+  border-bottom: 2px solid red;
+  background-color: inherit;
+}
+
+nav{
+  @include styles.flex-row-between
+}
+
+ul{
+  @include styles.flex-row-center($gap: 2vw);
+  font-family: styles.$hollow-font;
+  font-size: 1.4rem;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid red;
 }
